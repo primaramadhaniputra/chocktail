@@ -1,13 +1,212 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  text-transform: capitalize;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #ccc;
+}
+
+nav {
+  background-color: white;
+  box-shadow: 0 1px 3px black;
+}
+.nav-center {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-center .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.links {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.nav-center li {
+  list-style: none;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+@media (max-width: 400px) {
+  .nav-center {
+    flex-direction: column;
+  }
+  .links {
+    margin-top: 0.7rem;
+    border-top: 1px solid black;
+    /* background-color: red; */
+    width: 100%;
+  }
+}
+
+/* css about */
+.about-section {
+  text-align: center;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  max-width: 500px;
+}
+
+.about-section h3 {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* erro css */
+
+.error-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.error-section h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.error-section .back-home-btn {
+  text-decoration: none;
+  color: #fafafa;
+  background-color: rgb(103, 103, 236);
+  padding: 0.3rem 0.7rem;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.error-section .back-home-btn:hover {
+  color: rgb(103, 103, 236);
+  background-color: #fafafa;
+  border: 1px solid rgb(103, 103, 236);
+}
+
+/* css for search */
+.section-search {
+  padding: 0 1rem;
+}
+.search-form {
+  background-color: white;
+  box-shadow: 0 1px 3px black;
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 1rem 1rem;
+}
+
+.section-search label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.section-search input {
+  width: 100%;
+  border: 2px solid rgb(103, 103, 236);
+  outline: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+/* css list coctails */
+.list-cocktail {
+  text-align: center;
+}
+
+.list-cocktail h3 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.loading,
+.section-title {
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.cocktails-center {
+  padding: 1rem;
+  display: grid;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 1rem 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.cocktail {
+  margin: 0 auto;
+
+  background-color: white;
+  box-shadow: 0 1px 3px black;
+}
+
+.cocktail img {
+  width: 100%;
+}
+
+.cocktail-section {
+  max-width: 700px;
+  padding: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+.cocktail-section img {
+  max-width: 100%;
+}
+
+.cocktail-section .drink-data {
+  color: #fafafa;
+  padding: 0.1rem 0.3rem;
+  background-color: rgb(103, 103, 236);
+}
+.btn-primary {
+  color: #fafafa;
+  padding: 0.3rem 0.7rem;
+  background-color: rgb(103, 103, 236);
+  text-decoration: none;
+  border-radius: 3px;
+  display: block;
+  margin-top: 1rem;
+}
+.drink {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem 2rem;
+  text-align: start;
+}
+.drink span.drink-data {
+  display: inline-block;
+  width: max-content;
+  margin-right: 5px;
+}
+.drink-info p {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .drink {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
 }
